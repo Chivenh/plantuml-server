@@ -6,6 +6,33 @@
   <version>1-SNAPSHOT</version>
   <name>PlantUML Servlet</name>
   <packaging>war</packaging>
+  <repositories>
+    <repository>
+      <id>nexus-cargo</id>
+      <name>nexus-cargo</name>
+      <url>http://192.168.2.133:8081/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>nexus-cargo</id>
+      <name>nexus-cargo</name>
+      <url>http://192.168.2.133:8081/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
     <finalName>plantuml</finalName>
     <plugins>
