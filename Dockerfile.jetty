@@ -1,4 +1,4 @@
-FROM maven:3.6-jdk-8 AS builderjetty
+FROM 192.168.2.133:8022/library/maven:3.6.3-openjdk-8 AS builderjetty
 
 COPY pom.xml /app/
 COPY src /app/src/
@@ -20,6 +20,8 @@ RUN apt-get update && \
 USER jetty
 
 ENV GRAPHVIZ_DOT=/usr/bin/dot
+ENV PLANTUML_STATS on
+ENV ALLOW_PLANTUML_INCLUDE true
 
 ARG BASE_URL=ROOT
 COPY --from=builderjetty /app/target/plantuml.war /var/lib/jetty/webapps/$BASE_URL.war

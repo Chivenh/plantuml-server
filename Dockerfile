@@ -13,7 +13,8 @@ RUN mvn package
 RUN mkdir /app/.m2 && chmod -R a+w /app
 EXPOSE 8080
 ENV HOME /app
-ENV PLANTUML_STATS=on ALLOW_PLANTUML_INCLUDE=true
+ENV PLANTUML_STATS on
+ENV ALLOW_PLANTUML_INCLUDE true
 
 CMD java -Djetty.contextpath=/ -jar target/dependency/jetty-runner.jar target/plantuml.war
 
