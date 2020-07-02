@@ -9,7 +9,7 @@ RUN mvn --batch-mode --define java.net.useSystemProxies=true package
 ########################################################################################
 
 FROM jetty:9.4-jre8
-MAINTAINER D.Ducatel
+MAINTAINER LFH
 
 USER root
 
